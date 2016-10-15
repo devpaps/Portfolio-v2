@@ -1,0 +1,539 @@
+@import "../bourbon/bourbon"
+@import reset
+@import "fonts/fonts"
+@import "colors/_colors"
+@import body
+@import sidebar
+@import responsive
+
+*
+  box-sizing: border-box
+
+///////////  HEADER ///////////
+
+#header
+  width: 100%
+  height: 6.2em
+  background-color: #3B3B3B
+  @include iphone-6
+    height: 5.2em
+  h1
+    float: left
+    padding: 28px 0 29px 53px
+    color: $gray
+    @include medium-small
+      float: none
+      padding: 0
+      position: absolute
+      top: 2%
+      left: 50%
+      transform: translate(-50%)
+      font-size: 3em
+    @include iphone-6-plus
+      font-size: 10vw
+      top: 3.5%
+    @include iphone-6
+      top: 2.5%
+    span
+      color: #FC4057
+
+
+.logo
+  width: 3.125em
+  height: auto
+  position: relative
+  top: 1em
+  left: 1em
+  @include medium
+    width: 2.125em
+    top: 1.5em
+  @include large
+    width: 2.525em
+    top: 1.4em
+  @include medium-small
+    visibility: hidden
+
+nav
+  float: right
+  @include medium-small
+    position: fixed
+    bottom: 0
+    left: 0
+    font-size: 3vw
+    z-index: 100
+    width: 100%
+    float: none
+    padding: 1.1%
+    background-color: $main-color
+  ul
+    text-align: center
+    li
+      display: inline-block
+      font-size: 1.2em
+      padding: 35px 35px
+      @include medium
+        padding: 35px 25px
+      @include medium-small
+        width: 24%
+        padding: 0
+        border-right: 1px solid
+      @include medium-small
+      &:last-child
+        border: none
+
+      a
+        text-decoration: none
+        color: #E9E9E9
+        position: relative
+        letter-spacing: 0
+        &:hover, a:active
+          color: #FC4057
+        @include medium-small
+          color: #000
+        &:before
+          content: ""
+          position: absolute
+          width: 100%
+          height: 2px
+          bottom: 0
+          left: 0
+          background-color: #FC4057
+          visibility: hidden
+          transform: scaleX(0)
+          transition: all 0.3s ease-in-out
+        &:hover:before
+          visibility: visible
+          -webkit-transform: scaleX(1)
+          transform: scaleX(1)
+          letter-spacing: 5px
+        &[href*="#work"]:after
+          content: "\f0b1"
+          font-family: "Fontawesome"
+          font-size: 1vw
+          vertical-align: middle
+          margin-left: 10px
+        &[href*="#services"]:after
+          content: "\f121"
+          font-family: "Fontawesome"
+          font-size: 20px
+          vertical-align: middle
+          margin-left: 10px
+        &[href*="#about"]:after
+          content: "\f007"
+          font-family: "Fontawesome"
+          font-size: 20px
+          vertical-align: middle
+          margin-left: 10px
+        &[href*="#contact"]:after
+          content: "\f040"
+          font-family: "Fontawesome"
+          font-size: 20px
+          vertical-align: middle
+          margin-left: 10px
+
+
+
+
+
+///////////  TESTAMONIAL  ///////////
+
+.testamonial
+  background-color: $main-color
+  position: relative
+  width: 100%
+  top: -3px
+  overflow: hidden
+  padding-top: 18.750em
+  z-index: 0
+  @include medium
+    padding-top: 18.188em
+  @include medium-small
+    padding-top: 19.188em
+  @include sexhundra
+    padding-top: 17.188em
+  @include iphone-6-plus
+    padding-top: 15.188em
+  @include iphone-6
+    padding-top: 14.188em
+  h4
+    margin-top: 6em
+    width: 50%
+    background-color: rgba(0,0,0, .1)
+    padding: 3em
+    font-style: italic
+    @include xlarge
+      width: 60%
+      font-size: 1.2em
+    @include medium-small
+      font-size: 1.1em
+
+.testamonial:after
+  content: ""
+  display: block
+  background: white
+  height: 730px
+  width: 7000px
+  position: absolute
+  bottom: -82%
+  left: 0%
+  margin-left: -4000px
+  -webkit-transform: rotate(-10deg)
+  transform: rotate(-10deg)
+  z-index: -1
+
+h4
+  text-align: center
+  width: 43%
+  font-weight: normal
+  margin: auto
+  color: $black
+  @include iphone-6-plus
+    width: 75%
+
+#testamonial-text
+  width: 100%
+  position: absolute
+  top: 5.813em
+  font-family: 'Courgette', cursive
+  @include ipad
+    top: 3.813em
+    left: -2em
+  @include iphone-6-plus
+    top: .813em
+  @include iphone-6
+    top: .913em
+  h1
+    margin-left: 2em
+    padding-bottom: .5em
+    font-size: 2.9em
+    @include large
+      margin-left: 2em
+      font-size: 2.7em
+    @include medium
+      font-size: 2.4em
+    @include iphone-6-plus
+      margin: .5em 0 0 1.6em
+    @include iphone-6
+      font-size: 2em
+    @include iphone-5
+      font-size: 1.8em
+  h3
+    margin-left: 3.8em
+    font-style: oblique
+    @include large
+      margin-left: 2.8em
+    @include medium
+      font-size: 1.6em
+    @include iphone-6
+      font-size: 1.4em
+    @include iphone-5
+      font-size: 1.2em
+
+
+///////////  PROJECTS  ///////////
+
+.projects
+  height: 25em
+  background-color: $main-color
+  margin-top: 6em
+  @include xxxlarge
+    background-color: $white
+    height: inherit
+  @include xxlarge
+    height: inherit
+  @include iphone-5
+    margin-top: 4em
+  .test
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-around
+    align-items: center
+    height: 100%
+    .myDiv
+      position: relative
+      width: 432px
+      height: 286px
+      overflow: hidden
+      flex: auto
+      margin: 1.5vw
+      @include xxxlarge
+        height: 22vw
+      @include xxlarge
+        height: 30vw
+      @include large
+        height: 30vw
+      @include xmedium
+        height: 58vw
+      &:hover
+        .sometext
+          top: 0
+        img
+          filter: saturate(0) blur(2px)
+          transition: all 0.4s ease-in-out
+      img
+        display: block
+        width: 100%
+        @include xxlarge
+          &:nth-last-of-type(1)
+            flex-grow: 1
+      .sometext
+        position: absolute
+        top: 450px
+        left: 0
+        background: rgba(0,0,0, .5)
+        width: 100%
+        height: 115%
+        transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+        transform: translateZ(0)
+        display: table
+        h4
+          color: #FFB92E
+          font-size: 1.5em
+          width: 100%
+          display: table-cell
+          vertical-align: middle
+          padding: 0 5%
+          text-transform: uppercase
+          @include iphone-5
+            font-size: .9em
+        p
+          font-size: initial
+          color: #FFB92E
+          margin-top: 1em
+          text-transform: capitalize
+          @include iphone-5
+            font-size: .8em
+
+
+
+
+
+///////////  ABOUT  ///////////
+
+.about
+  height: 26.250em
+  background-color: $white
+  margin: 5em 10em
+  @include xlarge
+    margin: 5em 0em
+  @include large
+    margin: 0
+
+.container
+  display: flex
+  justify-content: space-around
+  align-items: center
+  margin-top: 4em
+  @include medium-small
+    flex-direction: column-reverse
+    text-align: center
+
+  .me
+    margin-top: 2em
+    box-shadow: 0 1.563em 1.875em -0.625em rgba(0 , 0 , 0 , 0.2) , 0px 0.125em 0.375em rgba(0 , 0 , 0 , 0.2)
+    @include large
+      width: 11.875em
+    @include medium-small
+      width: 10em
+
+  .container-text
+    width: 100%
+    margin: 4em 0 0 6em
+    @include large
+      margin: 4em 0 0 5em
+    @include medium
+      margin: 2em 0 0 3em
+    @include medium-small
+      margin: 0
+    @include iphone-5
+      margin-top: 2em
+
+    h3
+      padding-bottom: 1.5em
+      font-weight: normal
+      @include medium-small
+        font-size: 1.525em
+      @include ipad
+        font-size: 1.8em
+        font-weight: bold
+    span
+      font-style: italic
+      font-weight: 300
+    p
+      font-size: 1em
+      @include medium-small
+        font-size: .9em
+      @include ipad
+        font-size: 1.1em
+      @include iphone-5
+        font-size: .8em
+
+///////////  SERVICES  ///////////
+
+.services
+  height: 33.500em
+  background-color: $main-color
+  display: flex
+  flex-direction: row wrap
+  justify-content: space-around
+  @include large
+    height: 26.5em
+  @include medium
+    height: 23.5em
+  @include medium-small
+    margin-top: 9em
+  @include sexhundra
+    flex-wrap: wrap
+    height: 51.5em
+    margin-top: 14em
+  @include iphone-6-plus
+    height: 70.5em
+    flex-direction: row
+    margin-top: 16em
+
+  #mobile
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    @include sexhundra
+      margin-top: 1em
+    @include iphone-6-plus
+      margin: 3em 0 2em 0
+    img
+      width: 19em
+      height: 19em
+      border-radius: 50%
+      box-shadow: 0px 25px 15px -10px rgba(0 , 0 , 0 , 0.2) , 0px 2px 6px rgba(0 , 0 , 0 , 0.2)
+      border: 7px solid white
+      @include xlarge
+        width: 15em
+        height: 15em
+        border: 5px solid white
+      @include large
+        width: 10em
+        height: 10em
+      @include ipad
+        width: 8em
+        height: 8em
+      @include iphone-6-plus
+        width: 9em
+        height: 9em
+
+    h4
+      padding-top: 1em
+      margin: 0
+      width: 12em
+      @include large
+        font-size: 1.3em
+    p
+      padding-top: 1em
+      width: 18em
+      text-align: center
+      @include large
+        font-size: 1em
+      @include medium
+        font-size: .9em
+      @include medium-small
+        font-size: .8em
+      @include sexhundra
+        font-size: .9em
+      @include iphone-6-plus
+        margin-top: 1em
+
+
+  #design
+    @extend #mobile
+    h4
+      padding-top: 1em
+      width: 12em
+    p
+      padding-top: 1em
+      width: 18em
+      text-align: center
+
+  #logos
+    @extend #mobile
+    h4
+      padding-top: 1em
+      width: 12em
+    p
+      padding-top: 1em
+      width: 18em
+      text-align: center
+hr
+  margin: 4.375em auto 1.375em
+
+///////////  CONTACT  ///////////
+
+.contact
+  background-color: $white
+  height: 26.250em
+  @include large
+    height: 19.25em
+  @include xlarge
+    height: 21.25em
+  .contact-info
+    position: relative
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    display: inline-block
+  .contact-links
+    display: flex
+    justify-content: space-around
+    flex-direction: row
+    a
+      margin-bottom: 4em
+      color: black
+      text-decoration: none
+      display: inline-block
+    img
+      width: 2.825em
+      height: 2.825em
+      @include medium
+        width: 2.225em
+        height: 2.225em
+  h1
+    letter-spacing: 2px
+    font-weight: 400
+    @include medium
+      font-size: 2em
+  span
+    color: #2ecc71
+  h3
+    font-size: 1em
+    text-align: center
+
+///////////  FOOTER  ///////////
+
+.footer
+  height: 3.500em
+  background-color: $black
+  margin-bottom: 1em
+  border-radius: 0 0 .188em .188em
+  @include ipad
+    margin-bottom: 7em
+  @include sexhundra
+    margin-bottom: 3.5em
+  @include iphone-6-plus
+    margin-bottom: 4.5em
+  @include iphone-6
+    margin-bottom: 3.3em
+  h5
+    color: $gray
+    margin-left: 3em
+    padding-top: 1em
+    span
+      color: #FC4057
+  .social_media
+    display: inline-block
+    position: relative
+    float: right
+    top: -1.8em
+    margin-right: 2em
+    a:nth-child(1n+0)
+      margin-left: 1.5em
+      img
+        width: 2em
+        height: 2em

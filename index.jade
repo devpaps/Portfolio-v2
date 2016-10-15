@@ -1,0 +1,106 @@
+doctype html
+
+html(lang="en")
+  head
+    title DevPaps
+    meta(charset='utf-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="author", content="Lars Jönsson")
+    meta(name="Copyright" content="Copyright DevPaps 2016. All Rights Reserved.")
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    script(src="https://use.fontawesome.com/5bde50c5c5.js")
+    link(rel="stylesheet", href="assets/css/style.css")
+    
+  body
+  
+    .wrapper
+      #header
+        h1 Dev<span>Paps</span>
+        img.logo(src="assets/img/Logo-Red-svg-link.svg", alt="Devpaps Logo")
+        nav
+          ul
+            li
+              a(href="#work") Work
+            li
+              a(href="#services") Services
+            li
+              a(href="#about") About
+            li
+              a(href="#contact") Contact
+            
+            
+      .testamonial
+        #testamonial-text
+          h1 I make magic out of your ideas
+          h3 "Hit me with your wish"
+        h4 I’m a learning front-end developer trying to help my customers to be visible on web.
+        
+        
+
+      .projects#work
+        .test
+          .myDiv
+            img(src="assets/img/mac.jpg")
+            .sometext
+              h4 JRV Transport &amp; Entreprenad AB
+                p Design &amp; development
+              
+          .myDiv    
+            img(src="assets/img/mac2.jpg")
+            .sometext
+              h4 Tåsjö
+                p Design &amp; development
+            
+          .myDiv
+            img(src="assets/img/12.png")
+            .sometext
+              h4 Portfolio
+                p Design &amp; development
+
+                  
+      .about#about
+
+        .container
+          img.me(src="assets/img/me.jpg", alt="Picture of me")
+          .container-text
+            h3 About me
+            p This is me, Lars. I live in the northern part of Sweden. Up here i can do alot of work done by my own. I'm currently learning the Front-end of web development. <br>
+            p <span>I make your website to work well on mobile devices and for high resolution monitors.</span>
+            
+
+        
+      .services#services
+        #mobile
+          img(src="assets/img/responsive.svg", alt="Mobile Design Example")
+          h4 Correct On Mobile
+          p No more scrolling left and right with your thumb
+        #design
+          img(src="assets/img/webdesign.svg", alt="Web Design Example")
+          h4 Amazing Web Design
+          p You + Me = The best looking websites your friends and clients seen
+        #logos
+          img(src="assets/img/logo_design.svg", alt="Logo Design Example")
+          h4 Fantastic Logos
+          p You want a nice logo with your site, sure. I'll do one for you
+
+      
+      .contact#contact
+        .contact-info
+          .contact-links
+            a(href="www.twitter.com/devpaps") 
+              img(src="assets/img/twitter2.svg", alt="Twitter")
+            a(href="www.instagram.com/devpaps") 
+              img(src="assets/img/instagram2.svg", alt="Instagram")
+          a(href='mailto:crymeat@me.com')
+            h1 {contact} <span>me</span>.
+              h3 crymeat@me.com
+  
+      .footer
+        h5 Copyright &copy; Dev<span>Paps</span> 2016
+
+        
+
+  //javascript
+  script(src="assets/js/jquery-2.1.4.min.js")
+  script(src="assets/js/functions.js" type="text/javascript")
+    
