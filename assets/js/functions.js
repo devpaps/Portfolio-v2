@@ -1,9 +1,3 @@
-$( document ).ready(function() {
-
-  // Get started!
-
-});
-
 $(document).ready(function(){
   $('a[href^="#"]').on('click',function (e) {
 e.preventDefault();
@@ -15,9 +9,7 @@ $('html, body').stop().animate({
     'scrollTop': $target.offset().top
 }, 900, 'swing', function () {
     window.location.hash = target;
+    
+    });
+  });
 });
-});
-});
-$('html, body').stop().animate({
- 'scrollTop': $target.offset().top
-}, 900, 'swing');
