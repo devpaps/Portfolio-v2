@@ -106,30 +106,48 @@ nav
           -webkit-transform: scaleX(1)
           transform: scaleX(1)
           letter-spacing: 5px
-        &[href*="#work"]:after
-          content: "\f0b1"
-          font-family: "Fontawesome"
-          font-size: 1vw
-          vertical-align: middle
-          margin-left: 10px
-        &[href*="#services"]:after
-          content: "\f121"
-          font-family: "Fontawesome"
-          font-size: 20px
-          vertical-align: middle
-          margin-left: 10px
-        &[href*="#about"]:after
-          content: "\f007"
-          font-family: "Fontawesome"
-          font-size: 20px
-          vertical-align: middle
-          margin-left: 10px
-        &[href*="#contact"]:after
-          content: "\f040"
-          font-family: "Fontawesome"
-          font-size: 20px
-          vertical-align: middle
-          margin-left: 10px
+        @include medium-small
+          &[href*="#work"]:after
+            content: "\f0b1"
+            font-family: "Fontawesome"
+            font-size: 20px
+            vertical-align: middle
+            margin-left: 10px
+            @include iphone-6-plus
+              font-size: 15px
+            @include iphone-5
+              font-size: 12px
+          &[href*="#services"]:after
+            content: "\f121"
+            font-family: "Fontawesome"
+            font-size: 20px
+            vertical-align: middle
+            margin-left: 10px
+            @include iphone-6-plus
+              font-size: 15px
+            @include iphone-5
+              font-size: 12px
+          &[href*="#about"]:after
+            content: "\f007"
+            font-family: "Fontawesome"
+            font-size: 20px
+            vertical-align: middle
+            margin-left: 10px
+            @include iphone-6-plus
+              font-size: 15px
+            @include iphone-5
+              font-size: 12px
+          &[href*="#contact"]:after
+            content: "\f040"
+            font-family: "Fontawesome"
+            font-size: 20px
+            vertical-align: middle
+            margin-left: 10px
+            @include iphone-6-plus
+              font-size: 15px
+            @include iphone-5
+              font-size: 12px
+
 
 
 
@@ -146,11 +164,11 @@ nav
   padding-top: 18.750em
   z-index: 0
   @include medium
-    padding-top: 18.188em
+    padding-top: 15em
   @include medium-small
-    padding-top: 19.188em
+    padding-top: 22em
   @include sexhundra
-    padding-top: 17.188em
+    padding-top: 20em
   @include iphone-6-plus
     padding-top: 15.188em
   @include iphone-6
@@ -163,7 +181,6 @@ nav
     font-style: italic
     @include xlarge
       width: 60%
-      font-size: 1.2em
     @include medium-small
       font-size: 1.1em
 
@@ -180,15 +197,6 @@ nav
   -webkit-transform: rotate(-10deg)
   transform: rotate(-10deg)
   z-index: -1
-
-h4
-  text-align: center
-  width: 43%
-  font-weight: normal
-  margin: auto
-  color: $black
-  @include iphone-6-plus
-    width: 75%
 
 #testamonial-text
   width: 100%
@@ -211,6 +219,8 @@ h4
       font-size: 2.7em
     @include medium
       font-size: 2.4em
+    @include sexhundra
+      font-size: 2em
     @include iphone-6-plus
       margin: .5em 0 0 1.6em
     @include iphone-6
@@ -224,11 +234,21 @@ h4
       margin-left: 2.8em
     @include medium
       font-size: 1.6em
+    @include sexhundra
+      font-size: 1.4em
     @include iphone-6
       font-size: 1.4em
     @include iphone-5
       font-size: 1.2em
 
+h4
+  text-align: center
+  width: 43%
+  font-weight: normal
+  margin: auto
+  color: $black
+  @include iphone-6-plus
+    width: 75%
 
 ///////////  PROJECTS  ///////////
 
@@ -236,10 +256,14 @@ h4
   height: 25em
   background-color: $main-color
   margin-top: 6em
+  @include XXXXlarge
+    background-color: $white
+    height: inherit
   @include xxxlarge
     background-color: $white
     height: inherit
   @include xxlarge
+    background-color: $white
     height: inherit
   @include iphone-5
     margin-top: 4em
@@ -256,14 +280,16 @@ h4
       overflow: hidden
       flex: auto
       margin: 1.5vw
+      @include XXXXlarge
+        height: 420px
       @include xxxlarge
-        height: 22vw
+        height: 435px
       @include xxlarge
         height: 30vw
       @include large
         height: 30vw
       @include xmedium
-        height: 58vw
+        height: 46vw
       &:hover
         .sometext
           top: 0
@@ -377,18 +403,20 @@ h4
   flex-direction: row wrap
   justify-content: space-around
   @include large
-    height: 26.5em
+    height: 400px
   @include medium
-    height: 23.5em
+    height: 365px
   @include medium-small
     margin-top: 9em
-  @include sexhundra
+  @include ipad
     flex-wrap: wrap
-    height: 51.5em
+    padding-top: 3em
+    height: 600px
+  @include sexhundra
+    height: 870px
     margin-top: 14em
   @include iphone-6-plus
-    height: 70.5em
-    flex-direction: row
+    height: 1150px
     margin-top: 16em
 
   #mobile
@@ -401,8 +429,8 @@ h4
     @include iphone-6-plus
       margin: 3em 0 2em 0
     img
-      width: 19em
-      height: 19em
+      width: 16em
+      height: 16em
       border-radius: 50%
       box-shadow: 0px 25px 15px -10px rgba(0 , 0 , 0 , 0.2) , 0px 2px 6px rgba(0 , 0 , 0 , 0.2)
       border: 7px solid white
