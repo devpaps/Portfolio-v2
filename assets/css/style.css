@@ -659,12 +659,6 @@ h4 {
   top: 0;
 }
 
-@media only screen and (max-width: 950px) {
-  .projects .test .myDiv:hover:hover:focus .sometext {
-    top: 0;
-  }
-}
-
 .projects .test .myDiv:hover img {
   -webkit-filter: saturate(0) blur(2px);
           filter: saturate(0) blur(2px);
